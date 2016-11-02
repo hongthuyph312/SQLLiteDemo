@@ -6,13 +6,13 @@
 //  Copyright © 2016 themask. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "SignInViewController.h"
 
-@interface ViewController ()
+@interface SignInViewController ()
 
 @end
 
-@implementation ViewController
+@implementation SignInViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -25,5 +25,9 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)signInButton_clicked:(id)sender {
+}
+- (IBAction)signUpButton_clicked:(id)sender {
+}
 
 @end

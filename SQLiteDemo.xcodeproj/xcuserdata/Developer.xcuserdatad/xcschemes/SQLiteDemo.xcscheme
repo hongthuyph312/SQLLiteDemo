@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "8BB04A5F1DC9850200F50FDC"
-               BuildableName = "SQLLiteDemo.app"
-               BlueprintName = "SQLLiteDemo"
-               ReferencedContainer = "container:SQLLiteDemo.xcodeproj">
+               BuildableName = "SQLiteDemo.app"
+               BlueprintName = "SQLiteDemo"
+               ReferencedContainer = "container:SQLiteDemo.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8BB04A5F1DC9850200F50FDC"
-            BuildableName = "SQLLiteDemo.app"
-            BlueprintName = "SQLLiteDemo"
-            ReferencedContainer = "container:SQLLiteDemo.xcodeproj">
+            BuildableName = "SQLiteDemo.app"
+            BlueprintName = "SQLiteDemo"
+            ReferencedContainer = "container:SQLiteDemo.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -56,9 +56,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8BB04A5F1DC9850200F50FDC"
-            BuildableName = "SQLLiteDemo.app"
-            BlueprintName = "SQLLiteDemo"
-            ReferencedContainer = "container:SQLLiteDemo.xcodeproj">
+            BuildableName = "SQLiteDemo.app"
+            BlueprintName = "SQLiteDemo"
+            ReferencedContainer = "container:SQLiteDemo.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -75,9 +75,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8BB04A5F1DC9850200F50FDC"
-            BuildableName = "SQLLiteDemo.app"
-            BlueprintName = "SQLLiteDemo"
-            ReferencedContainer = "container:SQLLiteDemo.xcodeproj">
+            BuildableName = "SQLiteDemo.app"
+            BlueprintName = "SQLiteDemo"
+            ReferencedContainer = "container:SQLiteDemo.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
