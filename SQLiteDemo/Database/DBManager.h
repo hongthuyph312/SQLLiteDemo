@@ -9,10 +9,13 @@
 #import <Foundation/Foundation.h>
 #import <sqlite3.h>
 
-@interface DBManager : NSObject
+@interface DBManager : NSObject{
+    sqlite3 *database;
+    NSString *documentDirectory;
+    NSString *databasePath;
+}
 
-@property (nonatomic, strong) NSString *documentsDirectory;
-@property (nonatomic, strong) NSString *databaseFilename;
 + (DBManager *)getSharedInstance;
--(void)copyDatabaseIntoDocumentsDirectory;
++ (void)excuteQuery:(NSString *)queryString;
+
 @end

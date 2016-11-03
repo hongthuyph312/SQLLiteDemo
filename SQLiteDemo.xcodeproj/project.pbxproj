@@ -21,6 +21,7 @@
 		8BC781C81DCADD09004CF2FE /* NewWordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BC781B91DCADD09004CF2FE /* NewWordViewController.m */; };
 		8BC781C91DCADD09004CF2FE /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BC781BB1DCADD09004CF2FE /* SignInViewController.m */; };
 		8BC781CA1DCADD09004CF2FE /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BC781BD1DCADD09004CF2FE /* SignUpViewController.m */; };
+		8BC781CD1DCB430F004CF2FE /* DatabaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BC781CC1DCB430F004CF2FE /* DatabaseModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,8 @@
 		8BC781BB1DCADD09004CF2FE /* SignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignInViewController.m; sourceTree = "<group>"; };
 		8BC781BC1DCADD09004CF2FE /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
 		8BC781BD1DCADD09004CF2FE /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
+		8BC781CB1DCB430F004CF2FE /* DatabaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatabaseModel.h; sourceTree = "<group>"; };
+		8BC781CC1DCB430F004CF2FE /* DatabaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatabaseModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +116,8 @@
 			children = (
 				8BC781AF1DCADD09004CF2FE /* DBManager.h */,
 				8BC781B01DCADD09004CF2FE /* DBManager.m */,
+				8BC781CB1DCB430F004CF2FE /* DatabaseModel.h */,
+				8BC781CC1DCB430F004CF2FE /* DatabaseModel.m */,
 			);
 			path = Database;
 			sourceTree = "<group>";
@@ -210,6 +215,7 @@
 				8BC781C81DCADD09004CF2FE /* NewWordViewController.m in Sources */,
 				8BC781C21DCADD09004CF2FE /* Common.m in Sources */,
 				8BC781C51DCADD09004CF2FE /* main.m in Sources */,
+				8BC781CD1DCB430F004CF2FE /* DatabaseModel.m in Sources */,
 				8BC781C71DCADD09004CF2FE /* ListWordViewController.m in Sources */,
 				8BC781CA1DCADD09004CF2FE /* SignUpViewController.m in Sources */,
 				8BC781BE1DCADD09004CF2FE /* AppDelegate.m in Sources */,
