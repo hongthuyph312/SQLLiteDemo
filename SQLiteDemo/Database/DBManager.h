@@ -13,6 +13,6 @@
 
 @property (nonatomic, strong) NSString *documentsDirectory;
 @property (nonatomic, strong) NSString *databaseFilename;
-+ (DBManager *)share;
++ (DBManager *)getSharedInstance;
 -(void)copyDatabaseIntoDocumentsDirectory;
 @end

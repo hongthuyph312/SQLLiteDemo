@@ -7,13 +7,15 @@
 //
 
 #import "DBManager.h"
-
+static DBManager *sharedInstance = nil;
 @implementation DBManager
 
-//+ (DBManager *)share{
-//    
-//}
-
++ (DBManager *)getSharedInstance{
+    if (!sharedInstance) {
+        
+    }
+    return sharedInstance;
+}
 -(instancetype)initWithDatabaseFilename:(NSString *)dbFilename{
     self = [super init];
     if (self) {

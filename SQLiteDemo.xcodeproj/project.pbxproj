@@ -7,40 +7,47 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8BB04A651DC9850200F50FDC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BB04A641DC9850200F50FDC /* main.m */; };
-		8BB04A681DC9850200F50FDC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BB04A671DC9850200F50FDC /* AppDelegate.m */; };
-		8BB04A6E1DC9850200F50FDC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BB04A6C1DC9850200F50FDC /* Main.storyboard */; };
-		8BB04A701DC9850200F50FDC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BB04A6F1DC9850200F50FDC /* Assets.xcassets */; };
-		8BB04A731DC9850200F50FDC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BB04A711DC9850200F50FDC /* LaunchScreen.storyboard */; };
 		8BB04A7C1DC98EF000F50FDC /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BB04A7B1DC98EF000F50FDC /* libsqlite3.tbd */; };
-		8BB04A811DC98F8300F50FDC /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BB04A801DC98F8300F50FDC /* SignInViewController.m */; };
-		8BB04A841DC98FCD00F50FDC /* DBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BB04A831DC98FCD00F50FDC /* DBManager.m */; };
-		8BB04A871DC9996400F50FDC /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BB04A861DC9996400F50FDC /* SignUpViewController.m */; };
-		8BB04A8C1DC9D66B00F50FDC /* ListWordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BB04A8B1DC9D66B00F50FDC /* ListWordViewController.m */; };
-		8BB04A8F1DC9D8E300F50FDC /* NewWordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BB04A8E1DC9D8E300F50FDC /* NewWordViewController.m */; };
+		8BC781BE1DCADD09004CF2FE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BC781A51DCADD09004CF2FE /* AppDelegate.m */; };
+		8BC781BF1DCADD09004CF2FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BC781A61DCADD09004CF2FE /* Assets.xcassets */; };
+		8BC781C01DCADD09004CF2FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BC781A71DCADD09004CF2FE /* LaunchScreen.storyboard */; };
+		8BC781C11DCADD09004CF2FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BC781A91DCADD09004CF2FE /* Main.storyboard */; };
+		8BC781C21DCADD09004CF2FE /* Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BC781AC1DCADD09004CF2FE /* Common.m */; };
+		8BC781C31DCADD09004CF2FE /* DBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BC781B01DCADD09004CF2FE /* DBManager.m */; };
+		8BC781C41DCADD09004CF2FE /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8BC781B11DCADD09004CF2FE /* Info.plist */; };
+		8BC781C51DCADD09004CF2FE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BC781B21DCADD09004CF2FE /* main.m */; };
+		8BC781C61DCADD09004CF2FE /* managerDB.sql in Resources */ = {isa = PBXBuildFile; fileRef = 8BC781B31DCADD09004CF2FE /* managerDB.sql */; };
+		8BC781C71DCADD09004CF2FE /* ListWordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BC781B71DCADD09004CF2FE /* ListWordViewController.m */; };
+		8BC781C81DCADD09004CF2FE /* NewWordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BC781B91DCADD09004CF2FE /* NewWordViewController.m */; };
+		8BC781C91DCADD09004CF2FE /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BC781BB1DCADD09004CF2FE /* SignInViewController.m */; };
+		8BC781CA1DCADD09004CF2FE /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BC781BD1DCADD09004CF2FE /* SignUpViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		8B4BBEE11DC9E8970031346C /* manageDB.sql */ = {isa = PBXFileReference; lastKnownFileType = file; path = manageDB.sql; sourceTree = "<group>"; };
 		8BB04A601DC9850200F50FDC /* SQLiteDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SQLiteDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		8BB04A641DC9850200F50FDC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		8BB04A661DC9850200F50FDC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		8BB04A671DC9850200F50FDC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		8BB04A6D1DC9850200F50FDC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		8BB04A6F1DC9850200F50FDC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		8BB04A721DC9850200F50FDC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		8BB04A741DC9850200F50FDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8BB04A7B1DC98EF000F50FDC /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
-		8BB04A7F1DC98F8300F50FDC /* SignInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignInViewController.h; sourceTree = "<group>"; };
-		8BB04A801DC98F8300F50FDC /* SignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignInViewController.m; sourceTree = "<group>"; };
-		8BB04A821DC98FCD00F50FDC /* DBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBManager.h; sourceTree = "<group>"; };
-		8BB04A831DC98FCD00F50FDC /* DBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBManager.m; sourceTree = "<group>"; };
-		8BB04A851DC9996400F50FDC /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
-		8BB04A861DC9996400F50FDC /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
-		8BB04A8A1DC9D66B00F50FDC /* ListWordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListWordViewController.h; sourceTree = "<group>"; };
-		8BB04A8B1DC9D66B00F50FDC /* ListWordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListWordViewController.m; sourceTree = "<group>"; };
-		8BB04A8D1DC9D8E300F50FDC /* NewWordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewWordViewController.h; sourceTree = "<group>"; };
-		8BB04A8E1DC9D8E300F50FDC /* NewWordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewWordViewController.m; sourceTree = "<group>"; };
+		8BC781A41DCADD09004CF2FE /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		8BC781A51DCADD09004CF2FE /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		8BC781A61DCADD09004CF2FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8BC781A81DCADD09004CF2FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8BC781AA1DCADD09004CF2FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8BC781AB1DCADD09004CF2FE /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
+		8BC781AC1DCADD09004CF2FE /* Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Common.m; sourceTree = "<group>"; };
+		8BC781AD1DCADD09004CF2FE /* Constant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constant.h; sourceTree = "<group>"; };
+		8BC781AF1DCADD09004CF2FE /* DBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBManager.h; sourceTree = "<group>"; };
+		8BC781B01DCADD09004CF2FE /* DBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBManager.m; sourceTree = "<group>"; };
+		8BC781B11DCADD09004CF2FE /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8BC781B21DCADD09004CF2FE /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8BC781B31DCADD09004CF2FE /* managerDB.sql */ = {isa = PBXFileReference; lastKnownFileType = file; path = managerDB.sql; sourceTree = "<group>"; };
+		8BC781B41DCADD09004CF2FE /* SQLiteDemo-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SQLiteDemo-Prefix.pch"; sourceTree = "<group>"; };
+		8BC781B61DCADD09004CF2FE /* ListWordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListWordViewController.h; sourceTree = "<group>"; };
+		8BC781B71DCADD09004CF2FE /* ListWordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListWordViewController.m; sourceTree = "<group>"; };
+		8BC781B81DCADD09004CF2FE /* NewWordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewWordViewController.h; sourceTree = "<group>"; };
+		8BC781B91DCADD09004CF2FE /* NewWordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewWordViewController.m; sourceTree = "<group>"; };
+		8BC781BA1DCADD09004CF2FE /* SignInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignInViewController.h; sourceTree = "<group>"; };
+		8BC781BB1DCADD09004CF2FE /* SignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignInViewController.m; sourceTree = "<group>"; };
+		8BC781BC1DCADD09004CF2FE /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
+		8BC781BD1DCADD09004CF2FE /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +65,7 @@
 		8BB04A571DC9850200F50FDC = {
 			isa = PBXGroup;
 			children = (
-				8BB04A621DC9850200F50FDC /* SQLiteDemo */,
+				8BC781A31DCADD09004CF2FE /* SQLiteDemo */,
 				8BB04A611DC9850200F50FDC /* Products */,
 				8BB04A7A1DC98EF000F50FDC /* Frameworks */,
 			);
@@ -72,32 +79,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		8BB04A621DC9850200F50FDC /* SQLiteDemo */ = {
-			isa = PBXGroup;
-			children = (
-				8B4BBEE11DC9E8970031346C /* manageDB.sql */,
-				8BB04A7E1DC98F8300F50FDC /* ViewController */,
-				8BB04A7D1DC98F7B00F50FDC /* Database */,
-				8BB04A661DC9850200F50FDC /* AppDelegate.h */,
-				8BB04A671DC9850200F50FDC /* AppDelegate.m */,
-				8BB04A6C1DC9850200F50FDC /* Main.storyboard */,
-				8BB04A6F1DC9850200F50FDC /* Assets.xcassets */,
-				8BB04A711DC9850200F50FDC /* LaunchScreen.storyboard */,
-				8BB04A741DC9850200F50FDC /* Info.plist */,
-				8BB04A631DC9850200F50FDC /* Supporting Files */,
-			);
-			name = SQLiteDemo;
-			path = SQLLiteDemo;
-			sourceTree = "<group>";
-		};
-		8BB04A631DC9850200F50FDC /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				8BB04A641DC9850200F50FDC /* main.m */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 		8BB04A7A1DC98EF000F50FDC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -106,26 +87,47 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		8BB04A7D1DC98F7B00F50FDC /* Database */ = {
+		8BC781A31DCADD09004CF2FE /* SQLiteDemo */ = {
 			isa = PBXGroup;
 			children = (
-				8BB04A821DC98FCD00F50FDC /* DBManager.h */,
-				8BB04A831DC98FCD00F50FDC /* DBManager.m */,
+				8BC781A41DCADD09004CF2FE /* AppDelegate.h */,
+				8BC781A51DCADD09004CF2FE /* AppDelegate.m */,
+				8BC781A61DCADD09004CF2FE /* Assets.xcassets */,
+				8BC781A71DCADD09004CF2FE /* LaunchScreen.storyboard */,
+				8BC781A91DCADD09004CF2FE /* Main.storyboard */,
+				8BC781AB1DCADD09004CF2FE /* Common.h */,
+				8BC781AC1DCADD09004CF2FE /* Common.m */,
+				8BC781AD1DCADD09004CF2FE /* Constant.h */,
+				8BC781AE1DCADD09004CF2FE /* Database */,
+				8BC781B11DCADD09004CF2FE /* Info.plist */,
+				8BC781B21DCADD09004CF2FE /* main.m */,
+				8BC781B31DCADD09004CF2FE /* managerDB.sql */,
+				8BC781B41DCADD09004CF2FE /* SQLiteDemo-Prefix.pch */,
+				8BC781B51DCADD09004CF2FE /* ViewController */,
+			);
+			path = SQLiteDemo;
+			sourceTree = "<group>";
+		};
+		8BC781AE1DCADD09004CF2FE /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				8BC781AF1DCADD09004CF2FE /* DBManager.h */,
+				8BC781B01DCADD09004CF2FE /* DBManager.m */,
 			);
 			path = Database;
 			sourceTree = "<group>";
 		};
-		8BB04A7E1DC98F8300F50FDC /* ViewController */ = {
+		8BC781B51DCADD09004CF2FE /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				8BB04A7F1DC98F8300F50FDC /* SignInViewController.h */,
-				8BB04A801DC98F8300F50FDC /* SignInViewController.m */,
-				8BB04A851DC9996400F50FDC /* SignUpViewController.h */,
-				8BB04A861DC9996400F50FDC /* SignUpViewController.m */,
-				8BB04A8A1DC9D66B00F50FDC /* ListWordViewController.h */,
-				8BB04A8B1DC9D66B00F50FDC /* ListWordViewController.m */,
-				8BB04A8D1DC9D8E300F50FDC /* NewWordViewController.h */,
-				8BB04A8E1DC9D8E300F50FDC /* NewWordViewController.m */,
+				8BC781B61DCADD09004CF2FE /* ListWordViewController.h */,
+				8BC781B71DCADD09004CF2FE /* ListWordViewController.m */,
+				8BC781B81DCADD09004CF2FE /* NewWordViewController.h */,
+				8BC781B91DCADD09004CF2FE /* NewWordViewController.m */,
+				8BC781BA1DCADD09004CF2FE /* SignInViewController.h */,
+				8BC781BB1DCADD09004CF2FE /* SignInViewController.m */,
+				8BC781BC1DCADD09004CF2FE /* SignUpViewController.h */,
+				8BC781BD1DCADD09004CF2FE /* SignUpViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -188,9 +190,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8BB04A731DC9850200F50FDC /* LaunchScreen.storyboard in Resources */,
-				8BB04A701DC9850200F50FDC /* Assets.xcassets in Resources */,
-				8BB04A6E1DC9850200F50FDC /* Main.storyboard in Resources */,
+				8BC781C41DCADD09004CF2FE /* Info.plist in Resources */,
+				8BC781C11DCADD09004CF2FE /* Main.storyboard in Resources */,
+				8BC781BF1DCADD09004CF2FE /* Assets.xcassets in Resources */,
+				8BC781C01DCADD09004CF2FE /* LaunchScreen.storyboard in Resources */,
+				8BC781C61DCADD09004CF2FE /* managerDB.sql in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,33 +205,34 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8BB04A811DC98F8300F50FDC /* SignInViewController.m in Sources */,
-				8BB04A8C1DC9D66B00F50FDC /* ListWordViewController.m in Sources */,
-				8BB04A871DC9996400F50FDC /* SignUpViewController.m in Sources */,
-				8BB04A681DC9850200F50FDC /* AppDelegate.m in Sources */,
-				8BB04A651DC9850200F50FDC /* main.m in Sources */,
-				8BB04A8F1DC9D8E300F50FDC /* NewWordViewController.m in Sources */,
-				8BB04A841DC98FCD00F50FDC /* DBManager.m in Sources */,
+				8BC781C91DCADD09004CF2FE /* SignInViewController.m in Sources */,
+				8BC781C31DCADD09004CF2FE /* DBManager.m in Sources */,
+				8BC781C81DCADD09004CF2FE /* NewWordViewController.m in Sources */,
+				8BC781C21DCADD09004CF2FE /* Common.m in Sources */,
+				8BC781C51DCADD09004CF2FE /* main.m in Sources */,
+				8BC781C71DCADD09004CF2FE /* ListWordViewController.m in Sources */,
+				8BC781CA1DCADD09004CF2FE /* SignUpViewController.m in Sources */,
+				8BC781BE1DCADD09004CF2FE /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		8BB04A6C1DC9850200F50FDC /* Main.storyboard */ = {
+		8BC781A71DCADD09004CF2FE /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				8BB04A6D1DC9850200F50FDC /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		8BB04A711DC9850200F50FDC /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8BB04A721DC9850200F50FDC /* Base */,
+				8BC781A81DCADD09004CF2FE /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		8BC781A91DCADD09004CF2FE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8BC781AA1DCADD09004CF2FE /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -325,7 +330,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = SQLLiteDemo/Info.plist;
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "/Users/Developer/Desktop/MY PROJECT/SQLLiteDemo_Git/SQLiteDemo/SQLiteDemo-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = "";
+				INFOPLIST_FILE = "/Users/Developer/Desktop/MY PROJECT/SQLLiteDemo_Git/SQLiteDemo/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.themask.SQLiteDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -336,7 +346,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = SQLLiteDemo/Info.plist;
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "/Users/Developer/Desktop/MY PROJECT/SQLLiteDemo_Git/SQLiteDemo/SQLiteDemo-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = "";
+				INFOPLIST_FILE = "/Users/Developer/Desktop/MY PROJECT/SQLLiteDemo_Git/SQLiteDemo/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.themask.SQLiteDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
