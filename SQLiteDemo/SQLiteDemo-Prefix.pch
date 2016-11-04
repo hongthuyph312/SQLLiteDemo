@@ -14,5 +14,6 @@
 #import "Common.h"
 #import "DBManager.h"
 #import "Constant.h"
+#import "DatabaseModel.h"
 
 #endif /* SQLiteDemo_Prefix_pch */

@@ -44,6 +44,7 @@
         return;
     }
     // add new user to database
+   BOOL isSuccess = [DatabaseModel createNewUser:_emailTextfield.text andPassword:_passwordTextfield.text];
     
 }
 

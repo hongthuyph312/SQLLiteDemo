@@ -12,7 +12,9 @@
 
 + (BOOL)createNewUser:(NSString *)email andPassword:(NSString *)password{
     BOOL isSuccess = NO;
-     NSString *queryStr = @"";
+     NSString *queryStr = [NSString stringWithFormat:@"INSERT INTO users (email,password) values (%@,%@)",email,password];
+    DBManager *db = [DBManager getSharedInstance];
+    isSuccess = [db excuteSaveDataQuery:queryStr];
     return isSuccess;
 }
 

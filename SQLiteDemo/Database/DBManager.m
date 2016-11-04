@@ -30,10 +30,12 @@ static DBManager *sharedInstance = nil;
         sqlite3 *sqliteDatabase;
         BOOL openDatabase = sqlite3_open([databasePath UTF8String], &sqliteDatabase);
         if (openDatabase == SQLITE_OK) {
-            database = sqliteDatabase;
+            NSLog(@"Open database success !!!");
         }else{
             NSLog(@"Open database error !!!");
+            return nil;
         }
+        database = sqliteDatabase;
     }
     return self;
 }
@@ -44,15 +46,14 @@ static DBManager *sharedInstance = nil;
     NSString *sourcePath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:DB_NAME];
     // check file is exit or not
     NSFileManager *fileManager = [NSFileManager defaultManager];
+     NSError *error;
     if (![fileManager fileExistsAtPath:databasePath]) {
         // The database file does not exist in the documents directory, so copy it from the main bundle now.
-        
-        NSError *error;
         [fileManager copyItemAtPath:sourcePath toPath:databasePath error:&error];
         
         // Check if any error occurred during copying and display it.
         if (error != nil) {
-            NSLog(@"%@", [error localizedDescription]);
+            NSLog(@" --------- Copy database error ----------- \n %@ \n ------------------------------ ", [error localizedDescription]);
         } else {
             NSLog(@"Copy database successfully");
         }
@@ -97,13 +98,15 @@ static DBManager *sharedInstance = nil;
 - (BOOL)excuteSaveDataQuery:(NSString *)queryString{
     const char *sql = [queryString UTF8String];
     sqlite3_stmt *stmt;
-    if (sqlite3_prepare_v2(database, sql, -1, &stmt, NULL) == SQLITE_OK) {
+    int prepareStatus = sqlite3_prepare_v2(database, sql, -1, &stmt, NULL);
+    if (prepareStatus == SQLITE_OK) {
         if (sqlite3_step(stmt) == SQLITE_DONE) {
             return YES;
         } else {
             return NO;
         }
     } else {
+        NSLog(@"%d", prepareStatus);
         return NO;
     }
 }
