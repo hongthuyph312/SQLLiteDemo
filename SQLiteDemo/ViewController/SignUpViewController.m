@@ -28,21 +28,21 @@
     [_emailTextfield resignFirstResponder];
     [_passwordTextfield resignFirstResponder];
     [_rePasswordTextfield resignFirstResponder];
-    if (![Common validateEmail:_emailTextfield.text]) {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Warning" message:@"Email is invalid!!!" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
-        [alert show];
-        return;
-    }
-    if (_passwordTextfield.text.length < 8) {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Warning" message:@"Password at least 8 characters!!!" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
-        [alert show];
-        return;
-    }
-    if (![_passwordTextfield.text isEqualToString:_rePasswordTextfield.text]) {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Warning" message:@"Password not match!!!" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
-        [alert show];
-        return;
-    }
+//    if (![Common validateEmail:_emailTextfield.text]) {
+//        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Warning" message:@"Email is invalid!!!" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+//        [alert show];
+//        return;
+//    }
+//    if (_passwordTextfield.text.length < 8) {
+//        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Warning" message:@"Password at least 8 characters!!!" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+//        [alert show];
+//        return;
+//    }
+//    if (![_passwordTextfield.text isEqualToString:_rePasswordTextfield.text]) {
+//        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Warning" message:@"Password not match!!!" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+//        [alert show];
+//        return;
+//    }
     // add new user to database
    BOOL isSuccess = [DatabaseModel createNewUser:_emailTextfield.text andPassword:_passwordTextfield.text];
     
@@ -50,6 +50,10 @@
 
 #pragma mark TextFieldDelegate
 - (BOOL)resignFirstResponder{
+    return YES;
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField{
     return YES;
 }
 

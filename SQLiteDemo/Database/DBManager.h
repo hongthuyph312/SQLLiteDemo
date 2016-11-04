@@ -11,8 +11,6 @@
 
 @interface DBManager : NSObject{
     sqlite3 *database;
-    NSString *documentDirectory;
-    NSString *databasePath;
 }
 
 + (DBManager *)getSharedInstance;

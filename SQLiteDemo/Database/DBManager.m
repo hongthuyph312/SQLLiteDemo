@@ -8,14 +8,15 @@
 
 #import "DBManager.h"
 #define DB_NAME @"managerDB.sql"
+#define DOCUMENT_PATH [NSHomeDirectory() stringByAppendingFormat:@"/Documents/"]
 
 static DBManager *sharedInstance = nil;
 @implementation DBManager
 
 + (DBManager *)getSharedInstance{
     if (!sharedInstance) {
+        [DBManager copyDatabaseIntoDocumentsDirectory];
         sharedInstance = [[DBManager alloc] init];
-        [sharedInstance copyDatabaseIntoDocumentsDirectory];
     }
     return sharedInstance;
 }
@@ -24,9 +25,7 @@ static DBManager *sharedInstance = nil;
     self = [super init];
     if (self) {
         // Get the documents directory path
-        NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-        documentDirectory = [paths objectAtIndex:0];
-        databasePath = [documentDirectory stringByAppendingPathComponent:DB_NAME];
+        NSString *databasePath = [NSString stringWithFormat:@"%@%@",DOCUMENT_PATH,DB_NAME];
         sqlite3 *sqliteDatabase;
         BOOL openDatabase = sqlite3_open([databasePath UTF8String], &sqliteDatabase);
         if (openDatabase == SQLITE_OK) {
@@ -40,13 +39,17 @@ static DBManager *sharedInstance = nil;
     return self;
 }
 
-- (void)copyDatabaseIntoDocumentsDirectory{
++ (void)copyDatabaseIntoDocumentsDirectory{
+    
+    NSString *databasePath = [NSString stringWithFormat:@"%@%@",DOCUMENT_PATH,DB_NAME];
+    
     // Check if the database file exists in the documents directory.
     
     NSString *sourcePath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:DB_NAME];
+    
     // check file is exit or not
     NSFileManager *fileManager = [NSFileManager defaultManager];
-     NSError *error;
+    NSError *error;
     if (![fileManager fileExistsAtPath:databasePath]) {
         // The database file does not exist in the documents directory, so copy it from the main bundle now.
         [fileManager copyItemAtPath:sourcePath toPath:databasePath error:&error];
@@ -59,6 +62,7 @@ static DBManager *sharedInstance = nil;
         }
     }
 }
+
 - (NSArray *)excuteGetDataQuery:(NSString *)queryString{
     NSMutableArray *resultArray = [[NSMutableArray alloc] init];
     const char *sql = [queryString UTF8String];
@@ -103,12 +107,14 @@ static DBManager *sharedInstance = nil;
         if (sqlite3_step(stmt) == SQLITE_DONE) {
             return YES;
         } else {
+             NSLog(@"sqlite3_step error %s", sqlite3_errmsg(database));
             return NO;
         }
     } else {
-        NSLog(@"%d", prepareStatus);
+        NSLog(@"sqlite3_prepare_v2 error - cannot be opened database %s", sqlite3_errmsg(database));
         return NO;
     }
+    
 }
 
 @end
