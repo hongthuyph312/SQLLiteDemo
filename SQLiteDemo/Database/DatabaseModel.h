@@ -8,9 +8,13 @@
 
 #import <Foundation/Foundation.h>
 #import "DBManager.h"
+#import "UserModel.h"
+#import "WordModel.h"
 
 @interface DatabaseModel : NSObject
 
 + (BOOL)createNewUser:(NSString *)email andPassword:(NSString *)password;
-
++ (NSArray *)loginWithUser:(NSString *)email andPassword:(NSString *)password;
++ (BOOL)saveWord:(NSInteger) wordId andJapaneseString:(NSString *)japaneseText andVietNameseText:(NSString *)vietnameseText andType:(NSUInteger)type andExample:(NSString *)example withUserId:(NSInteger)userId;
++ (NSArray *)getListWordWithUserId:(NSUInteger)userId;
 @end

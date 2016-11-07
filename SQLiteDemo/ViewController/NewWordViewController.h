@@ -8,9 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface NewWordViewController : UIViewController
+@interface NewWordViewController : UIViewController<UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *japaneseWordTextfield;
-@property (weak, nonatomic) IBOutlet UITextField *englishWordTextfield;
 @property (weak, nonatomic) IBOutlet UITextField *vietnameseWordTextfield;
+@property (weak, nonatomic) IBOutlet UITextView *exampleTextView;
 
 @end

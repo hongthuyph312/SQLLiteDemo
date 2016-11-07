@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8B791DB71DD0704800828DBD /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B791DB61DD0704800828DBD /* UserModel.m */; };
+		8B791DBA1DD0706700828DBD /* WordModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B791DB91DD0706700828DBD /* WordModel.m */; };
 		8BB04A7C1DC98EF000F50FDC /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BB04A7B1DC98EF000F50FDC /* libsqlite3.tbd */; };
 		8BC781BE1DCADD09004CF2FE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BC781A51DCADD09004CF2FE /* AppDelegate.m */; };
 		8BC781BF1DCADD09004CF2FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BC781A61DCADD09004CF2FE /* Assets.xcassets */; };
@@ -25,6 +27,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8B791DB51DD0704800828DBD /* UserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserModel.h; sourceTree = "<group>"; };
+		8B791DB61DD0704800828DBD /* UserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserModel.m; sourceTree = "<group>"; };
+		8B791DB81DD0706700828DBD /* WordModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordModel.h; sourceTree = "<group>"; };
+		8B791DB91DD0706700828DBD /* WordModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordModel.m; sourceTree = "<group>"; };
 		8BB04A601DC9850200F50FDC /* SQLiteDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SQLiteDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BB04A7B1DC98EF000F50FDC /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		8BC781A41DCADD09004CF2FE /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -118,6 +124,10 @@
 				8BC781B01DCADD09004CF2FE /* DBManager.m */,
 				8BC781CB1DCB430F004CF2FE /* DatabaseModel.h */,
 				8BC781CC1DCB430F004CF2FE /* DatabaseModel.m */,
+				8B791DB51DD0704800828DBD /* UserModel.h */,
+				8B791DB61DD0704800828DBD /* UserModel.m */,
+				8B791DB81DD0706700828DBD /* WordModel.h */,
+				8B791DB91DD0706700828DBD /* WordModel.m */,
 			);
 			path = Database;
 			sourceTree = "<group>";
@@ -210,12 +220,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B791DBA1DD0706700828DBD /* WordModel.m in Sources */,
 				8BC781C91DCADD09004CF2FE /* SignInViewController.m in Sources */,
 				8BC781C31DCADD09004CF2FE /* DBManager.m in Sources */,
 				8BC781C81DCADD09004CF2FE /* NewWordViewController.m in Sources */,
 				8BC781C21DCADD09004CF2FE /* Common.m in Sources */,
 				8BC781C51DCADD09004CF2FE /* main.m in Sources */,
 				8BC781CD1DCB430F004CF2FE /* DatabaseModel.m in Sources */,
+				8B791DB71DD0704800828DBD /* UserModel.m in Sources */,
 				8BC781C71DCADD09004CF2FE /* ListWordViewController.m in Sources */,
 				8BC781CA1DCADD09004CF2FE /* SignUpViewController.m in Sources */,
 				8BC781BE1DCADD09004CF2FE /* AppDelegate.m in Sources */,

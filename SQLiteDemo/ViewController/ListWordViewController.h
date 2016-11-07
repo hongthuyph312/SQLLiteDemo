@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ListWordViewController : UIViewController
+@interface ListWordViewController : UIViewController<UITableViewDelegate,UITableViewDataSource>
+
 @property (weak, nonatomic) IBOutlet UITableView *listWordTableView;
 
 @end
