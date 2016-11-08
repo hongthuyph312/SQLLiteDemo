@@ -24,6 +24,8 @@
 		8BC781C91DCADD09004CF2FE /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BC781BB1DCADD09004CF2FE /* SignInViewController.m */; };
 		8BC781CA1DCADD09004CF2FE /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BC781BD1DCADD09004CF2FE /* SignUpViewController.m */; };
 		8BC781CD1DCB430F004CF2FE /* DatabaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BC781CC1DCB430F004CF2FE /* DatabaseModel.m */; };
+		8BF9CCCE1DD17D8700151ACF /* ListWordTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BF9CCCD1DD17D8700151ACF /* ListWordTableViewCell.m */; };
+		8BF9CCD11DD1D03000151ACF /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BF9CCD01DD1D03000151ACF /* DetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +59,10 @@
 		8BC781BD1DCADD09004CF2FE /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
 		8BC781CB1DCB430F004CF2FE /* DatabaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatabaseModel.h; sourceTree = "<group>"; };
 		8BC781CC1DCB430F004CF2FE /* DatabaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatabaseModel.m; sourceTree = "<group>"; };
+		8BF9CCCC1DD17D8700151ACF /* ListWordTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListWordTableViewCell.h; sourceTree = "<group>"; };
+		8BF9CCCD1DD17D8700151ACF /* ListWordTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListWordTableViewCell.m; sourceTree = "<group>"; };
+		8BF9CCCF1DD1D03000151ACF /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		8BF9CCD01DD1D03000151ACF /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +141,7 @@
 		8BC781B51DCADD09004CF2FE /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				8BF9CCCB1DD17D6C00151ACF /* Cell */,
 				8BC781B61DCADD09004CF2FE /* ListWordViewController.h */,
 				8BC781B71DCADD09004CF2FE /* ListWordViewController.m */,
 				8BC781B81DCADD09004CF2FE /* NewWordViewController.h */,
@@ -143,8 +150,19 @@
 				8BC781BB1DCADD09004CF2FE /* SignInViewController.m */,
 				8BC781BC1DCADD09004CF2FE /* SignUpViewController.h */,
 				8BC781BD1DCADD09004CF2FE /* SignUpViewController.m */,
+				8BF9CCCF1DD1D03000151ACF /* DetailViewController.h */,
+				8BF9CCD01DD1D03000151ACF /* DetailViewController.m */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		8BF9CCCB1DD17D6C00151ACF /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				8BF9CCCC1DD17D8700151ACF /* ListWordTableViewCell.h */,
+				8BF9CCCD1DD17D8700151ACF /* ListWordTableViewCell.m */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -221,6 +239,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8B791DBA1DD0706700828DBD /* WordModel.m in Sources */,
+				8BF9CCCE1DD17D8700151ACF /* ListWordTableViewCell.m in Sources */,
 				8BC781C91DCADD09004CF2FE /* SignInViewController.m in Sources */,
 				8BC781C31DCADD09004CF2FE /* DBManager.m in Sources */,
 				8BC781C81DCADD09004CF2FE /* NewWordViewController.m in Sources */,
@@ -228,6 +247,7 @@
 				8BC781C51DCADD09004CF2FE /* main.m in Sources */,
 				8BC781CD1DCB430F004CF2FE /* DatabaseModel.m in Sources */,
 				8B791DB71DD0704800828DBD /* UserModel.m in Sources */,
+				8BF9CCD11DD1D03000151ACF /* DetailViewController.m in Sources */,
 				8BC781C71DCADD09004CF2FE /* ListWordViewController.m in Sources */,
 				8BC781CA1DCADD09004CF2FE /* SignUpViewController.m in Sources */,
 				8BC781BE1DCADD09004CF2FE /* AppDelegate.m in Sources */,

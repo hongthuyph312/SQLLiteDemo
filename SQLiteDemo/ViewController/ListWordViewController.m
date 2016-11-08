@@ -8,12 +8,15 @@
 
 #import "ListWordViewController.h"
 #import "WordModel.h"
+#import "ListWordTableViewCell.h"
+#import "DetailViewController.h"
 
 @interface ListWordViewController ()
 {
     NSMutableArray *arrWord;
     DatabaseModel *databaseModel;
     AppDelegate *appdelegate;
+    WordModel *selectedWord;
 }
 @end
 
@@ -47,16 +50,39 @@
     return  arrWord.count;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    WordModel *wordModel = [arrWord objectAtIndex:indexPath.row];
+    return [ListWordTableViewCell heightForCell:wordModel];
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    static NSString *identifier = @"wordCell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+    static NSString *identifier = @"ListWordTableViewCell";
+    ListWordTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
     if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
+        cell = [[ListWordTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
     }
     WordModel *wordModel = [arrWord objectAtIndex:indexPath.row];
-    cell.textLabel.text = wordModel.japanese;
-    cell.detailTextLabel.text = wordModel.vietnamese;
+    [cell setupCell:wordModel];
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    selectedWord = [arrWord objectAtIndex:indexPath.row];
+    [self performSegueWithIdentifier:@"pushToDetail" sender:self];
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        // Delete Word
+        WordModel *currentWord = [arrWord objectAtIndex:indexPath.row];
+        BOOL isSuccess = [DatabaseModel deleteWord:currentWord.wordId];
+        if (isSuccess == YES) {
+            [self reloadListWord];
+        }else{
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Delete wrong" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+            [alert show];
+        }
+    }
 }
 
 - (void) reloadListWord{
@@ -67,14 +93,16 @@
     [_listWordTableView reloadData];
 }
 
-/*
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    if ([segue.identifier isEqualToString:@"pushToDetail"]) {
+        DetailViewController *detailVC = (DetailViewController *)[segue destinationViewController];
+        detailVC.selectedWord = selectedWord;
+    }
 }
-*/
 
 @end

@@ -23,7 +23,12 @@
     UITapGestureRecognizer *tapOther = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissKeyboard:)];
     [self.view addGestureRecognizer:tapOther];
     
-    [self setSelectedButton:[self.view viewWithTag:100]];
+    if (_selectedWord) {
+        // edit
+        _japaneseWordTextfield.text = _selectedWord.japanese;
+        _vietnameseWordTextfield.text = _selectedWord.vietnamese;
+        _exampleTextView.text = _selectedWord.example;
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -46,36 +51,23 @@
         [alert show];
         return;
     }
-    NSInteger type;
-    for (int i = 100; i<105; i++) {
-        UIButton *btn = [self.view viewWithTag:i];
-        if (btn.selected) {
-            type = i - 100;
-            break;
-        }
+    NSInteger wordId = 0;
+    if (_selectedWord) {
+        wordId = _selectedWord.wordId;
     }
-    BOOL isSuccess = [DatabaseModel saveWord:0 andJapaneseString:_japaneseWordTextfield.text andVietNameseText:_vietnameseWordTextfield.text andType:type andExample:_exampleTextView.text withUserId:appdelegate.currentUser.userId];
+    BOOL isSuccess = [DatabaseModel saveWord:wordId andJapaneseString:_japaneseWordTextfield.text andVietNameseText:_vietnameseWordTextfield.text andExample:_exampleTextView.text withUserId:appdelegate.currentUser.userId];
     if (isSuccess) {
-        [self.navigationController popViewControllerAnimated:YES];
+        NSInteger index;
+        if (self.selectedWord) {
+            index = self.navigationController.viewControllers.count - 3;
+        } else {
+            index = self.navigationController.viewControllers.count - 2;
+        }
+        [self.navigationController popToViewController:[self.navigationController.viewControllers objectAtIndex:index] animated:YES];
     } else {
         alert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
     }
     
-}
-- (IBAction)selectTypeAction:(id)sender {
-    [self setSelectedButton:sender];
-}
-
-- (void) setSelectedButton:(UIButton *)button{
-    button.selected = YES;
-    button.backgroundColor = [UIColor colorWithRed:131/255.0f green:158/255.0f blue:27/255.0f alpha:1];
-    for (int i = 100; i < 105; i++) {
-        if (i != [button tag]) {
-            UIButton *btn = (UIButton *)[self.view viewWithTag:i];
-            btn.selected = NO;
-            btn.backgroundColor = [UIColor lightGrayColor];
-        }
-    }
 }
 
 #pragma mark TextFieldDelegate

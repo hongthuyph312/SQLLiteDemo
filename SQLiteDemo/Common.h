@@ -7,9 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface Common : NSObject
 
 + (BOOL)validateEmail:(NSString *)strEmail;
-
++ (CGFloat)heightForViewWithText:(NSString *)text andFont:(UIFont *)font andSizeWidth:(CGFloat)width;
 @end

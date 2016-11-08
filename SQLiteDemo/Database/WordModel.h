@@ -15,7 +15,6 @@
 @property (nonatomic, strong) NSString *japanese;
 @property (nonatomic, strong) NSString *vietnamese;
 @property (nonatomic, strong) NSString *example;
-@property (nonatomic) NSInteger type;
 
 - (id)initWithDict:(NSDictionary*)dict;
 

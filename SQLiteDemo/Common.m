@@ -16,4 +16,17 @@
     return [emailTest evaluateWithObject:strEmail];
 }
 
++ (CGFloat)heightForViewWithText:(NSString *)text andFont:(UIFont *)font andSizeWidth:(CGFloat)width
+{
+    if (!font) {
+        font = [UIFont systemFontOfSize:14.0];
+    }
+    CGSize sizeToFit = [text boundingRectWithSize:CGSizeMake(width, CGFLOAT_MAX)
+                                          options:NSStringDrawingUsesLineFragmentOrigin
+                                       attributes:@{ NSFontAttributeName:font }
+                                          context:nil].size;
+    return sizeToFit.height + 1;
+}
+
+
 @end

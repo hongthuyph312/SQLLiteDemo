@@ -33,15 +33,15 @@
     return arrData;
 }
 
-+ (BOOL)saveWord:(NSInteger)wordId andJapaneseString:(NSString *)japaneseText andVietNameseText:(NSString *)vietnameseText andType:(NSUInteger)type andExample:(NSString *)example withUserId:(NSInteger)userId{
++ (BOOL)saveWord:(NSInteger)wordId andJapaneseString:(NSString *)japaneseText andVietNameseText:(NSString *)vietnameseText andExample:(NSString *)example withUserId:(NSInteger)userId{
     BOOL isSuccess = NO;
      NSString *queryStr;
     if (wordId) {
         //Update Word
-        
+        queryStr = [NSString stringWithFormat:@"UPDATE words SET japanese='%@',vietnamese='%@',example='%@' WHERE wordId='%lu'",japaneseText,vietnameseText,example,wordId];
     }else{
         //New Word
-        queryStr = [NSString stringWithFormat:@"INSERT INTO words(japanese,vietnamese,type,example,userId) values ('%@','%@',%lu,'%@',%lu)",japaneseText,vietnameseText,(unsigned long)type,example,userId];
+        queryStr = [NSString stringWithFormat:@"INSERT INTO words(japanese,vietnamese,example,userId) values ('%@','%@','%@',%lu)",japaneseText,vietnameseText,example,userId];
     }
     DBManager *db = [DBManager getSharedInstance];
     isSuccess = [db excuteSaveDataQuery:queryStr];
@@ -61,4 +61,14 @@
     }
     return arrData;
 }
+
++ (BOOL)deleteWord:(NSInteger)wordId{
+    BOOL isSuccess = NO;
+    NSString *queryStr;
+    queryStr = [NSString stringWithFormat:@"DELETE FROM words WHERE wordId='%ld'",(long)wordId];
+    DBManager *db = [DBManager getSharedInstance];
+    isSuccess = [db excuteSaveDataQuery:queryStr];
+    return isSuccess;
+}
+
 @end

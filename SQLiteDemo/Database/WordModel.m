@@ -25,8 +25,8 @@
         if ([dict objectForKey:@"vietnamese"]) {
             self.vietnamese = [dict objectForKey:@"vietnamese"];
         }
-        if ([dict objectForKey:@"type"]) {
-            self.type = [[dict objectForKey:@"type"] integerValue];
+        if ([dict objectForKey:@"example"]) {
+            self.example = [dict objectForKey:@"example"];
         }
     }
     return self;
