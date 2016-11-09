@@ -27,6 +27,7 @@ static DBManager *sharedInstance = nil;
         // Get the documents directory path
         NSString *databasePath = [NSString stringWithFormat:@"%@%@",DOCUMENT_PATH,DB_NAME];
         sqlite3 *sqliteDatabase;
+        //open database
         BOOL openDatabase = sqlite3_open([databasePath UTF8String], &sqliteDatabase);
         if (openDatabase == SQLITE_OK) {
             NSLog(@"Open database success !!!");
@@ -56,7 +57,7 @@ static DBManager *sharedInstance = nil;
         
         // Check if any error occurred during copying and display it.
         if (error != nil) {
-            NSLog(@" --------- Copy database error ----------- \n %@ \n ------------------------------ ", [error localizedDescription]);
+            NSLog(@" Copy database error --- %@", [error localizedDescription]);
         } else {
             NSLog(@"Copy database successfully");
         }
@@ -66,10 +67,14 @@ static DBManager *sharedInstance = nil;
 - (NSArray *)excuteGetDataQuery:(NSString *)queryString{
     NSMutableArray *resultArray = [[NSMutableArray alloc] init];
     const char *sql = [queryString UTF8String];
+    // Will be stored the query after having been compiled into a SQLite statement
     sqlite3_stmt *stmt;
+    // Load all data from database to memory
     if (sqlite3_prepare_v2(database, sql, -1, &stmt, NULL) == SQLITE_OK) {
+        // Loop through the results and add them to the resultsArray
         while (sqlite3_step(stmt) == SQLITE_ROW) {
-            NSMutableDictionary *dict = [[NSMutableDictionary alloc] init]; // dictionary for each object of array
+            // dictionary for each object of array
+            NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
             // get total colum
             int totalColums = sqlite3_column_count(stmt);
             for (int i = 0; i < totalColums; i++) {
@@ -101,7 +106,9 @@ static DBManager *sharedInstance = nil;
 
 - (BOOL)excuteSaveDataQuery:(NSString *)queryString{
     const char *sql = [queryString UTF8String];
+    // Will be stored the query after having been compiled into a SQLite statement
     sqlite3_stmt *stmt;
+    // Load all data from database to memory
     int prepareStatus = sqlite3_prepare_v2(database, sql, -1, &stmt, NULL);
     if (prepareStatus == SQLITE_OK) {
         if (sqlite3_step(stmt) == SQLITE_DONE) {
