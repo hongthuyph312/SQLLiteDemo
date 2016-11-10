@@ -422,6 +422,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="New Word" id="X92-tC-ZRG"/>
                     <connections>
+                        <outlet property="addButton" destination="SiE-H0-gLq" id="0cw-72-lpI"/>
                         <outlet property="exampleTextView" destination="vko-LP-bQc" id="wZC-Ku-mj5"/>
                         <outlet property="japaneseWordTextfield" destination="tKo-B5-ocL" id="UXj-e3-Pik"/>
                         <outlet property="vietnameseWordTextfield" destination="mCo-Oa-29D" id="B9f-sE-VqJ"/>

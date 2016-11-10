@@ -12,6 +12,7 @@
 
 @property (nonatomic, strong) WordModel *selectedWord;
 
+@property (weak, nonatomic) IBOutlet UIButton *addButton;
 @property (weak, nonatomic) IBOutlet UITextField *japaneseWordTextfield;
 @property (weak, nonatomic) IBOutlet UITextField *vietnameseWordTextfield;
 @property (weak, nonatomic) IBOutlet UITextView *exampleTextView;

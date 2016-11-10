@@ -28,6 +28,11 @@
         _japaneseWordTextfield.text = _selectedWord.japanese;
         _vietnameseWordTextfield.text = _selectedWord.vietnamese;
         _exampleTextView.text = _selectedWord.example;
+        [_addButton setTitle:@"Save" forState:UIControlStateNormal];
+        self.navigationItem.title = @"Edit Word";
+    } else {
+        [_addButton setTitle:@"Add" forState:UIControlStateNormal];
+        self.navigationItem.title = @"New Word";
     }
 }
 
