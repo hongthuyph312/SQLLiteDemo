@@ -36,15 +36,16 @@
 + (BOOL)saveWord:(NSInteger)wordId andJapaneseString:(NSString *)japaneseText andVietNameseText:(NSString *)vietnameseText andExample:(NSString *)example withUserId:(NSInteger)userId{
     BOOL isSuccess = NO;
      NSString *queryStr;
+    NSMutableArray *arrContent = [[NSMutableArray alloc] initWithObjects:japaneseText,vietnameseText,example, nil];
     if (wordId) {
         //Update Word
-        queryStr = [NSString stringWithFormat:@"UPDATE words SET japanese='%@',vietnamese='%@',example='%@' WHERE wordId='%lu'",japaneseText,vietnameseText,example,wordId];
+        queryStr = [NSString stringWithFormat:@"UPDATE words SET japanese=?,vietnamese=?,example=? WHERE wordId='%lu'",(long)wordId];
     }else{
         //New Word
-        queryStr = [NSString stringWithFormat:@"INSERT INTO words(japanese,vietnamese,example,userId) values ('%@','%@','%@',%lu)",japaneseText,vietnameseText,example,userId];
+        queryStr = [NSString stringWithFormat:@"INSERT INTO words(japanese,vietnamese,example,userId) values (?,?,?,%lu)",(long)userId];
     }
     DBManager *db = [DBManager getSharedInstance];
-    isSuccess = [db excuteSaveDataQuery:queryStr];
+    isSuccess = [db excuteSaveDataQuery:queryStr withContent:arrContent];
     return isSuccess;
 }
 

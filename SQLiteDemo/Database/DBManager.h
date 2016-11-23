@@ -16,4 +16,5 @@
 + (DBManager *)getSharedInstance;
 - (NSArray *)excuteGetDataQuery:(NSString *)queryString;
 - (BOOL)excuteSaveDataQuery:(NSString *)queryString;
+- (BOOL)excuteSaveDataQuery:(NSString *)queryString withContent:(NSMutableArray *)arrContent;
 @end

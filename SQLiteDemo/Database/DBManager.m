@@ -121,6 +121,29 @@ static DBManager *sharedInstance = nil;
         NSLog(@"sqlite3_prepare_v2 error - cannot be opened database %s", sqlite3_errmsg(database));
         return NO;
     }
+}
+
+- (BOOL)excuteSaveDataQuery:(NSString *)queryString withContent:(NSMutableArray *)arrContent{
+    const char *sql = [queryString UTF8String];
+    // Will be stored the query after having been compiled into a SQLite statement
+    sqlite3_stmt *stmt;
+    // Load all data from database to memory
+    int prepareStatus = sqlite3_prepare_v2(database, sql, -1, &stmt, NULL);
+    if (prepareStatus == SQLITE_OK) {
+        for (int i = 0; i < arrContent.count; i++) {
+            NSString *str = [arrContent objectAtIndex:i];
+             sqlite3_bind_text(stmt, i+1, [str UTF8String], -1, SQLITE_TRANSIENT);
+        }
+        if (sqlite3_step(stmt) == SQLITE_DONE) {
+            return YES;
+        } else {
+            NSLog(@"sqlite3_step error %s", sqlite3_errmsg(database));
+            return NO;
+        }
+    } else {
+        NSLog(@"sqlite3_prepare_v2 error - cannot be opened database %s", sqlite3_errmsg(database));
+        return NO;
+    }
     
 }
 
